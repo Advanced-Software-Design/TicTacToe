@@ -34,6 +34,7 @@ public class MainMenu {
 			Stage stage = new Stage();
 			stage.setScene(new Scene(gameScene));  
 			stage.show();
+
 		} catch(Exception e) 
 		{
 			System.out.println("Error Loading Class MainMenu!");
