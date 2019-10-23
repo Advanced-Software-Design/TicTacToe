@@ -12,6 +12,7 @@ public class TicTacToeController {
 
 	@FXML
 	GridPane gameBoard;
+	
 
 	@FXML
 	private TextField textField1;
@@ -135,7 +136,7 @@ public class TicTacToeController {
 	@FXML
 	void buttonX8Press(ActionEvent event) {
 		textField8.setText("X");
-
+		findWinner();
 	}
 	@FXML
 	void buttonX9Press(ActionEvent event) {
@@ -191,6 +192,26 @@ public class TicTacToeController {
 	void quitButton(ActionEvent event) {
 		System.exit(0);
 	}
+    @FXML
+    void buttonQuitWinner(ActionEvent event) {
+    	System.exit(0);
+    }
+
+    @FXML
+    void buttonRestart(ActionEvent event) {
+
+    		try {
+    			FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Final.fxml"));
+    			Parent gameScene = (Parent) fxmlLoader.load();
+    			Stage stage = new Stage();
+    			stage.setScene(new Scene(gameScene));  
+    			stage.show();
+
+    		} catch(Exception e) 
+    		{
+    			System.out.println("Error Reloading TicTacToe Board!");
+    		}
+    }
 	public void findWinner(){
 		
 		//Row 1

@@ -27,35 +27,35 @@
          <font>
             <Font size="48.0" />
          </font></TextField>
-      <TextField fx:id="textField2" editable="false" prefHeight="97.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2" GridPane.valignment="BOTTOM">
+      <TextField fx:id="textField2" editable="false" prefHeight="97.0" prefWidth="200.0" text="                                       `" GridPane.columnIndex="1" GridPane.rowIndex="2" GridPane.valignment="BOTTOM">
          <font>
             <Font size="48.0" />
          </font></TextField>
-      <TextField fx:id="textField3" editable="false" prefHeight="97.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="BOTTOM">
+      <TextField fx:id="textField3" editable="false" prefHeight="97.0" prefWidth="200.0" text="                                                                                   `" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="BOTTOM">
          <font>
             <Font size="48.0" />
          </font></TextField>
-      <TextField fx:id="textField4" editable="false" prefHeight="97.0" GridPane.rowIndex="3" GridPane.valignment="BOTTOM">
+      <TextField fx:id="textField4" editable="false" prefHeight="97.0" text="                                                                                            `" GridPane.rowIndex="3" GridPane.valignment="BOTTOM">
          <font>
             <Font size="48.0" />
          </font></TextField>
-      <TextField fx:id="textField5" editable="false" prefHeight="97.0" GridPane.columnIndex="1" GridPane.rowIndex="3" GridPane.valignment="BOTTOM">
+      <TextField fx:id="textField5" editable="false" prefHeight="97.0" text="                                                                                        `" GridPane.columnIndex="1" GridPane.rowIndex="3" GridPane.valignment="BOTTOM">
          <font>
             <Font size="48.0" />
          </font></TextField>
-      <TextField fx:id="textField6" editable="false" prefHeight="97.0" GridPane.columnIndex="2" GridPane.rowIndex="3" GridPane.valignment="BOTTOM">
+      <TextField fx:id="textField6" editable="false" prefHeight="97.0" text="                                                                                           `" GridPane.columnIndex="2" GridPane.rowIndex="3" GridPane.valignment="BOTTOM">
          <font>
             <Font size="48.0" />
          </font></TextField>
-      <TextField fx:id="textField7" editable="false" prefHeight="97.0" GridPane.rowIndex="4" GridPane.valignment="BOTTOM">
+      <TextField fx:id="textField7" editable="false" prefHeight="97.0" text="                                                                                                                                       `                                                                                           `" GridPane.rowIndex="4" GridPane.valignment="BOTTOM">
          <font>
             <Font size="48.0" />
          </font></TextField>
-      <TextField fx:id="textField8" editable="false" prefHeight="97.0" GridPane.columnIndex="1" GridPane.rowIndex="4" GridPane.valignment="BOTTOM">
+      <TextField fx:id="textField8" editable="false" prefHeight="97.0" text="                                                                              `                                                                              `                                                                              `                                                                              `" GridPane.columnIndex="1" GridPane.rowIndex="4" GridPane.valignment="BOTTOM">
          <font>
             <Font size="48.0" />
          </font></TextField>
-      <TextField fx:id="textField9" editable="false" prefHeight="97.0" GridPane.columnIndex="2" GridPane.rowIndex="4" GridPane.valignment="BOTTOM">
+      <TextField fx:id="textField9" editable="false" prefHeight="97.0" text="                                                                              `                                                                              `0" GridPane.columnIndex="2" GridPane.rowIndex="4" GridPane.valignment="BOTTOM">
          <font>
             <Font size="48.0" />
          </font></TextField>
