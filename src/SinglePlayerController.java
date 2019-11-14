@@ -7,12 +7,13 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
+import java.util.Random;
 
-public class TicTacToeController {
+public class SinglePlayerController {
 
 	@FXML
 	GridPane gameBoard;
-	
+
 
 	@FXML
 	private TextField textField1;
@@ -97,220 +98,231 @@ public class TicTacToeController {
 
 	@FXML
 	private Button button18;
-	
+
 	@FXML
 	void buttonX1Press(ActionEvent event) {
 		textField1.setText("X");
 		button1.setDisable(true);
 		button2.setDisable(true);
-		button3.setDisable(true);
-		button4.setDisable(false);
-		button5.setDisable(true);
-		button6.setDisable(false);
-		button7.setDisable(true);
-		button8.setDisable(false);
-		button9.setDisable(true);
-		button10.setDisable(false);
-		button11.setDisable(true);
-		button12.setDisable(false);
-		button13.setDisable(true);
-		button14.setDisable(false);
-		button15.setDisable(true);
-		button16.setDisable(false);
-		button17.setDisable(true);
-		button18.setDisable(false);
+		button3.setDisable(false);
+		button4.setDisable(true);
+		button5.setDisable(false);
+		button6.setDisable(true);
+		button7.setDisable(false);
+		button8.setDisable(true);
+		button9.setDisable(false);
+		button10.setDisable(true);
+		button11.setDisable(false);
+		button12.setDisable(true);
+		button13.setDisable(false);
+		button14.setDisable(true);
+		button15.setDisable(false);
+		button16.setDisable(true);
+		button17.setDisable(false);
+		button18.setDisable(true);
+
+		
+		findDraw();
 		findWinner();
 	}
 	@FXML
 	void buttonX2Press(ActionEvent event) {
 		textField2.setText("X");
-		button1.setDisable(true);
-		button2.setDisable(false);
+		button1.setDisable(false);
+		button2.setDisable(true);
 		button3.setDisable(true);
 		button4.setDisable(true);
-		button5.setDisable(true);
-		button6.setDisable(false);
-		button7.setDisable(true);
-		button8.setDisable(false);
-		button9.setDisable(true);
-		button10.setDisable(false);
-		button11.setDisable(true);
-		button12.setDisable(false);
-		button13.setDisable(true);
-		button14.setDisable(false);
-		button15.setDisable(true);
-		button16.setDisable(false);
-		button17.setDisable(true);
-		button18.setDisable(false);
-		
+		button5.setDisable(false);
+		button6.setDisable(true);
+		button7.setDisable(false);
+		button8.setDisable(true);
+		button9.setDisable(false);
+		button10.setDisable(true);
+		button11.setDisable(false);
+		button12.setDisable(true);
+		button13.setDisable(false);
+		button14.setDisable(true);
+		button15.setDisable(false);
+		button16.setDisable(true);
+		button17.setDisable(false);
+		button18.setDisable(true);
+
+		findDraw();
 		findWinner();
 	}
 	@FXML
 	void buttonX3Press(ActionEvent event) {
 		textField3.setText("X");
-		button1.setDisable(true);
-		button2.setDisable(false);
-		button3.setDisable(true);
-		button4.setDisable(false);
+		button1.setDisable(false);
+		button2.setDisable(true);
+		button3.setDisable(false);
+		button4.setDisable(true);
 		button5.setDisable(true);
 		button6.setDisable(true);
-		button7.setDisable(true);
-		button8.setDisable(false);
-		button9.setDisable(true);
-		button10.setDisable(false);
-		button11.setDisable(true);
-		button12.setDisable(false);
-		button13.setDisable(true);
-		button14.setDisable(false);
-		button15.setDisable(true);
-		button16.setDisable(false);
-		button17.setDisable(true);
-		button18.setDisable(false);
-		
+		button7.setDisable(false);
+		button8.setDisable(true);
+		button9.setDisable(false);
+		button10.setDisable(true);
+		button11.setDisable(false);
+		button12.setDisable(true);
+		button13.setDisable(false);
+		button14.setDisable(true);
+		button15.setDisable(false);
+		button16.setDisable(true);
+		button17.setDisable(false);
+		button18.setDisable(true);
+
+		findDraw();
 		findWinner();
 	}
 	@FXML
 	void buttonX4Press(ActionEvent event) {
 		textField4.setText("X");
-		button1.setDisable(true);
-		button2.setDisable(false);
-		button3.setDisable(true);
-		button4.setDisable(false);
-		button5.setDisable(true);
-		button6.setDisable(false);
+		button1.setDisable(false);
+		button2.setDisable(true);
+		button3.setDisable(false);
+		button4.setDisable(true);
+		button5.setDisable(false);
+		button6.setDisable(true);
 		button7.setDisable(true);
 		button8.setDisable(true);
-		button9.setDisable(true);
-		button10.setDisable(false);
-		button11.setDisable(true);
-		button12.setDisable(false);
-		button13.setDisable(true);
-		button14.setDisable(false);
-		button15.setDisable(true);
-		button16.setDisable(false);
-		button17.setDisable(true);
-		button18.setDisable(false);
-		
+		button9.setDisable(false);
+		button10.setDisable(true);
+		button11.setDisable(false);
+		button12.setDisable(true);
+		button13.setDisable(false);
+		button14.setDisable(true);
+		button15.setDisable(false);
+		button16.setDisable(true);
+		button17.setDisable(false);
+		button18.setDisable(true);
+
+		findDraw();
 		findWinner();
 	}
 	@FXML
 	void buttonX5Press(ActionEvent event) {
 		textField5.setText("X");
-		button1.setDisable(true);
-		button2.setDisable(false);
-		button3.setDisable(true);
-		button4.setDisable(false);
-		button5.setDisable(true);
-		button6.setDisable(false);
-		button7.setDisable(true);
-		button8.setDisable(false);
+		button1.setDisable(false);
+		button2.setDisable(true);
+		button3.setDisable(false);
+		button4.setDisable(true);
+		button5.setDisable(false);
+		button6.setDisable(true);
+		button7.setDisable(false);
+		button8.setDisable(true);
 		button9.setDisable(true);
 		button10.setDisable(true);
-		button11.setDisable(true);
-		button12.setDisable(false);
-		button13.setDisable(true);
-		button14.setDisable(false);
-		button15.setDisable(true);
-		button16.setDisable(false);
-		button17.setDisable(true);
-		button18.setDisable(false);
-		
+		button11.setDisable(false);
+		button12.setDisable(true);
+		button13.setDisable(false);
+		button14.setDisable(true);
+		button15.setDisable(false);
+		button16.setDisable(true);
+		button17.setDisable(false);
+		button18.setDisable(true);
+
+		findDraw();
 		findWinner();
 	}
 	@FXML
 	void buttonX6Press(ActionEvent event) {
 		textField6.setText("X");
-		button1.setDisable(true);
-		button2.setDisable(false);
-		button3.setDisable(true);
-		button4.setDisable(false);
-		button5.setDisable(true);
-		button6.setDisable(false);
-		button7.setDisable(true);
-		button8.setDisable(false);
-		button9.setDisable(true);
-		button10.setDisable(false);
+		button1.setDisable(false);
+		button2.setDisable(true);
+		button3.setDisable(false);
+		button4.setDisable(true);
+		button5.setDisable(false);
+		button6.setDisable(true);
+		button7.setDisable(false);
+		button8.setDisable(true);
+		button9.setDisable(false);
+		button10.setDisable(true);
 		button11.setDisable(true);
 		button12.setDisable(true);
-		button13.setDisable(true);
-		button14.setDisable(false);
-		button15.setDisable(true);
-		button16.setDisable(false);
-		button17.setDisable(true);
-		button18.setDisable(false);
-	
+		button13.setDisable(false);
+		button14.setDisable(true);
+		button15.setDisable(false);
+		button16.setDisable(true);
+		button17.setDisable(false);
+		button18.setDisable(true);
+
+		findDraw();
 		findWinner();
 	}
 	@FXML
 	void buttonX7Press(ActionEvent event) {
 		textField7.setText("X");
-		button1.setDisable(true);
-		button2.setDisable(false);
-		button3.setDisable(true);
-		button4.setDisable(false);
-		button5.setDisable(true);
-		button6.setDisable(false);
-		button7.setDisable(true);
-		button8.setDisable(false);
-		button9.setDisable(true);
-		button10.setDisable(false);
-		button11.setDisable(true);
-		button12.setDisable(false);
+		button1.setDisable(false);
+		button2.setDisable(true);
+		button3.setDisable(false);
+		button4.setDisable(true);
+		button5.setDisable(false);
+		button6.setDisable(true);
+		button7.setDisable(false);
+		button8.setDisable(true);
+		button9.setDisable(false);
+		button10.setDisable(true);
+		button11.setDisable(false);
+		button12.setDisable(true);
 		button13.setDisable(true);
 		button14.setDisable(true);
-		button15.setDisable(true);
-		button16.setDisable(false);
-		button17.setDisable(true);
-		button18.setDisable(false);
-		
+		button15.setDisable(false);
+		button16.setDisable(true);
+		button17.setDisable(false);
+		button18.setDisable(true);
+
+		findDraw();
 		findWinner();
 	}
 	@FXML
 	void buttonX8Press(ActionEvent event) {
 		textField8.setText("X");
-		button1.setDisable(true);
-		button2.setDisable(false);
-		button3.setDisable(true);
-		button4.setDisable(false);
-		button5.setDisable(true);
-		button6.setDisable(false);
-		button7.setDisable(true);
-		button8.setDisable(false);
-		button9.setDisable(true);
-		button10.setDisable(false);
-		button11.setDisable(true);
-		button12.setDisable(false);
-		button13.setDisable(true);
-		button14.setDisable(false);
+		button1.setDisable(false);
+		button2.setDisable(true);
+		button3.setDisable(false);
+		button4.setDisable(true);
+		button5.setDisable(false);
+		button6.setDisable(true);
+		button7.setDisable(false);
+		button8.setDisable(true);
+		button9.setDisable(false);
+		button10.setDisable(true);
+		button11.setDisable(false);
+		button12.setDisable(true);
+		button13.setDisable(false);
+		button14.setDisable(true);
 		button15.setDisable(true);
 		button16.setDisable(true);
-		button17.setDisable(true);
-		button18.setDisable(false);
-		
+		button17.setDisable(false);
+		button18.setDisable(true);
+
+		findDraw();
 		findWinner();
 	}
 	@FXML
 	void buttonX9Press(ActionEvent event) {
 		textField9.setText("X");
-		button1.setDisable(true);
-		button2.setDisable(false);
-		button3.setDisable(true);
-		button4.setDisable(false);
-		button5.setDisable(true);
-		button6.setDisable(false);
-		button7.setDisable(true);
-		button8.setDisable(false);
-		button9.setDisable(true);
-		button10.setDisable(false);
-		button11.setDisable(true);
-		button12.setDisable(false);
-		button13.setDisable(true);
-		button14.setDisable(false);
-		button15.setDisable(true);
-		button16.setDisable(false);
+		button1.setDisable(false);
+		button2.setDisable(true);
+		button3.setDisable(false);
+		button4.setDisable(true);
+		button5.setDisable(false);
+		button6.setDisable(true);
+		button7.setDisable(false);
+		button8.setDisable(true);
+		button9.setDisable(false);
+		button10.setDisable(true);
+		button11.setDisable(false);
+		button12.setDisable(true);
+		button13.setDisable(false);
+		button14.setDisable(true);
+		button15.setDisable(false);
+		button16.setDisable(true);
 		button17.setDisable(true);
 		button18.setDisable(true);
-		
+
+		findDraw();
 		findWinner();
 	}
 	@FXML
@@ -318,248 +330,269 @@ public class TicTacToeController {
 		textField1.setText("O");
 		button1.setDisable(true);
 		button2.setDisable(true);
-		button3.setDisable(false);
-		button4.setDisable(true);
-		button5.setDisable(false);
-		button6.setDisable(true);
-		button7.setDisable(false);
-		button8.setDisable(true);
-		button9.setDisable(false);
-		button10.setDisable(true);
-		button11.setDisable(false);
-		button12.setDisable(true);
-		button13.setDisable(false);
-		button14.setDisable(true);
-		button15.setDisable(false);
-		button16.setDisable(true);
-		button17.setDisable(false);
-		button18.setDisable(true);
+		button3.setDisable(true);
+		button4.setDisable(false);
+		button5.setDisable(true);
+		button6.setDisable(false);
+		button7.setDisable(true);
+		button8.setDisable(false);
+		button9.setDisable(true);
+		button10.setDisable(false);
+		button11.setDisable(true);
+		button12.setDisable(false);
+		button13.setDisable(true);
+		button14.setDisable(false);
+		button15.setDisable(true);
+		button16.setDisable(false);
+		button17.setDisable(true);
+		button18.setDisable(false);
 
-		
+		findDraw();
 		findWinner();
 	}
 	@FXML
 	void buttonO2Press(ActionEvent event) {
 		textField2.setText("O");
-		button1.setDisable(false);
+		button1.setDisable(true);
+		button2.setDisable(false);
 		button3.setDisable(true);
 		button4.setDisable(true);
-		button5.setDisable(false);
-		button6.setDisable(true);
-		button7.setDisable(false);
-		button8.setDisable(true);
-		button9.setDisable(false);
-		button10.setDisable(true);
-		button11.setDisable(false);
-		button12.setDisable(true);
-		button13.setDisable(false);
-		button14.setDisable(true);
-		button15.setDisable(false);
-		button16.setDisable(true);
-		button17.setDisable(false);
-		button18.setDisable(true);
+		button5.setDisable(true);
+		button6.setDisable(false);
+		button7.setDisable(true);
+		button8.setDisable(false);
+		button9.setDisable(true);
+		button10.setDisable(false);
+		button11.setDisable(true);
+		button12.setDisable(false);
+		button13.setDisable(true);
+		button14.setDisable(false);
+		button15.setDisable(true);
+		button16.setDisable(false);
+		button17.setDisable(true);
+		button18.setDisable(false);
 
-		
-		
+		findDraw();
 		findWinner();
 	}
 	@FXML
 	void buttonO3Press(ActionEvent event) {
 		textField3.setText("O");
-		button1.setDisable(false);
-		button2.setDisable(true);
-		button3.setDisable(false);
-		button4.setDisable(true);
+		button1.setDisable(true);
+		button2.setDisable(false);
+		button3.setDisable(true);
+		button4.setDisable(false);
 		button5.setDisable(true);
 		button6.setDisable(true);
-		button7.setDisable(false);
-		button8.setDisable(true);
-		button9.setDisable(false);
-		button10.setDisable(true);
-		button11.setDisable(false);
-		button12.setDisable(true);
-		button13.setDisable(false);
-		button14.setDisable(true);
-		button15.setDisable(false);
-		button16.setDisable(true);
-		button17.setDisable(false);
-		button18.setDisable(true);
+		button7.setDisable(true);
+		button8.setDisable(false);
+		button9.setDisable(true);
+		button10.setDisable(false);
+		button11.setDisable(true);
+		button12.setDisable(false);
+		button13.setDisable(true);
+		button14.setDisable(false);
+		button15.setDisable(true);
+		button16.setDisable(false);
+		button17.setDisable(true);
+		button18.setDisable(false);
 
+		findDraw();
 		findWinner();
 	}
 	@FXML
 	void buttonO4Press(ActionEvent event) {
 		textField4.setText("O");
-		button1.setDisable(false);
-		button2.setDisable(true);
-		button3.setDisable(false);
-		button4.setDisable(true);
-		button5.setDisable(false);
-		button6.setDisable(true);
+		button1.setDisable(true);
+		button2.setDisable(false);
+		button3.setDisable(true);
+		button4.setDisable(false);
+		button5.setDisable(true);
+		button6.setDisable(false);
 		button7.setDisable(true);
 		button8.setDisable(true);
-		button9.setDisable(false);
-		button10.setDisable(true);
-		button11.setDisable(false);
-		button12.setDisable(true);
-		button13.setDisable(false);
-		button14.setDisable(true);
-		button15.setDisable(false);
-		button16.setDisable(true);
-		button17.setDisable(false);
-		button18.setDisable(true);
-		
+		button9.setDisable(true);
+		button10.setDisable(false);
+		button11.setDisable(true);
+		button12.setDisable(false);
+		button13.setDisable(true);
+		button14.setDisable(false);
+		button15.setDisable(true);
+		button16.setDisable(false);
+		button17.setDisable(true);
+		button18.setDisable(false);
+
+		findDraw();
 		findWinner();
 	}
 	@FXML
 	void buttonO5Press(ActionEvent event) {
 		textField5.setText("O");
-		button1.setDisable(false);
-		button2.setDisable(true);
-		button3.setDisable(false);
-		button4.setDisable(true);
-		button5.setDisable(false);
-		button6.setDisable(true);
-		button7.setDisable(false);
-		button8.setDisable(true);
+		button1.setDisable(true);
+		button2.setDisable(false);
+		button3.setDisable(true);
+		button4.setDisable(false);
+		button5.setDisable(true);
+		button6.setDisable(false);
+		button7.setDisable(true);
+		button8.setDisable(false);
 		button9.setDisable(true);
 		button10.setDisable(true);
-		button11.setDisable(false);
-		button12.setDisable(true);
-		button13.setDisable(false);
-		button14.setDisable(true);
-		button15.setDisable(false);
-		button16.setDisable(true);
-		button17.setDisable(false);
-		button18.setDisable(true);
-		
+		button11.setDisable(true);
+		button12.setDisable(false);
+		button13.setDisable(true);
+		button14.setDisable(false);
+		button15.setDisable(true);
+		button16.setDisable(false);
+		button17.setDisable(true);
+		button18.setDisable(false);
+
+		findDraw();
 		findWinner();
 	}
 	@FXML
 	void buttonO6Press(ActionEvent event) {
 		textField6.setText("O");
-		button1.setDisable(false);
-		button2.setDisable(true);
-		button3.setDisable(false);
-		button4.setDisable(true);
-		button5.setDisable(false);
-		button6.setDisable(true);
-		button7.setDisable(false);
-		button8.setDisable(true);
-		button9.setDisable(false);
-		button10.setDisable(true);
+		button1.setDisable(true);
+		button2.setDisable(false);
+		button3.setDisable(true);
+		button4.setDisable(false);
+		button5.setDisable(true);
+		button6.setDisable(false);
+		button7.setDisable(true);
+		button8.setDisable(false);
+		button9.setDisable(true);
+		button10.setDisable(false);
 		button11.setDisable(true);
 		button12.setDisable(true);
-		button13.setDisable(false);
-		button14.setDisable(true);
-		button15.setDisable(false);
-		button16.setDisable(true);
-		button17.setDisable(false);
-		button18.setDisable(true);
-		
+		button13.setDisable(true);
+		button14.setDisable(false);
+		button15.setDisable(true);
+		button16.setDisable(false);
+		button17.setDisable(true);
+		button18.setDisable(false);
+
+		findDraw();
 		findWinner();
 	}
 	@FXML
 	void buttonO7Press(ActionEvent event) {
 		textField7.setText("O");
-		button1.setDisable(false);
-		button2.setDisable(true);
-		button3.setDisable(false);
-		button4.setDisable(true);
-		button5.setDisable(false);
-		button6.setDisable(true);
-		button7.setDisable(false);
-		button8.setDisable(true);
-		button9.setDisable(false);
-		button10.setDisable(true);
-		button11.setDisable(false);
-		button12.setDisable(true);
+		button1.setDisable(true);
+		button2.setDisable(false);
+		button3.setDisable(true);
+		button4.setDisable(false);
+		button5.setDisable(true);
+		button6.setDisable(false);
+		button7.setDisable(true);
+		button8.setDisable(false);
+		button9.setDisable(true);
+		button10.setDisable(false);
+		button11.setDisable(true);
+		button12.setDisable(false);
 		button13.setDisable(true);
 		button14.setDisable(true);
-		button15.setDisable(false);
-		button16.setDisable(true);
-		button17.setDisable(false);
-		button18.setDisable(true);
-		
+		button15.setDisable(true);
+		button16.setDisable(false);
+		button17.setDisable(true);
+		button18.setDisable(false);
+
+		findDraw();
 		findWinner();
 	}
 	@FXML
 	void buttonO8Press(ActionEvent event) {
 		textField8.setText("O");
-		button1.setDisable(false);
-		button2.setDisable(true);
-		button3.setDisable(false);
-		button4.setDisable(true);
-		button5.setDisable(false);
-		button6.setDisable(true);
-		button7.setDisable(false);
-		button8.setDisable(true);
-		button9.setDisable(false);
-		button10.setDisable(true);
-		button11.setDisable(false);
-		button12.setDisable(true);
-		button13.setDisable(false);
-		button14.setDisable(true);
+		button1.setDisable(true);
+		button2.setDisable(false);
+		button3.setDisable(true);
+		button4.setDisable(false);
+		button5.setDisable(true);
+		button6.setDisable(false);
+		button7.setDisable(true);
+		button8.setDisable(false);
+		button9.setDisable(true);
+		button10.setDisable(false);
+		button11.setDisable(true);
+		button12.setDisable(false);
+		button13.setDisable(true);
+		button14.setDisable(false);
 		button15.setDisable(true);
 		button16.setDisable(true);
-		button17.setDisable(false);
-		button18.setDisable(true);
-		
+		button17.setDisable(true);
+		button18.setDisable(false);
+
+		findDraw();
 		findWinner();
 	}
 	@FXML
 	void buttonO9Press(ActionEvent event) {
 		textField9.setText("O");
-		button1.setDisable(false);
-		button2.setDisable(true);
-		button3.setDisable(false);
-		button4.setDisable(true);
-		button5.setDisable(false);
-		button6.setDisable(true);
-		button7.setDisable(false);
-		button8.setDisable(true);
-		button9.setDisable(false);
-		button10.setDisable(true);
-		button11.setDisable(false);
-		button12.setDisable(true);
-		button13.setDisable(false);
-		button14.setDisable(true);
-		button15.setDisable(false);
-		button16.setDisable(true);
+		button1.setDisable(true);
+		button2.setDisable(false);
+		button3.setDisable(true);
+		button4.setDisable(false);
+		button5.setDisable(true);
+		button6.setDisable(false);
+		button7.setDisable(true);
+		button8.setDisable(false);
+		button9.setDisable(true);
+		button10.setDisable(false);
+		button11.setDisable(true);
+		button12.setDisable(false);
+		button13.setDisable(true);
+		button14.setDisable(false);
+		button15.setDisable(true);
+		button16.setDisable(false);
 		button17.setDisable(true);
 		button18.setDisable(true);
-		
+
+		findDraw();
 		findWinner();
 	}
 	@FXML
 	void quitButton(ActionEvent event) {
 		System.exit(0);
 	}
-    @FXML
-    void buttonQuitWinner(ActionEvent event) {
-    	System.exit(0);
-    }
+	@FXML
+	void buttonQuitWinner(ActionEvent event) {
+		System.exit(0);
+	}
 
-    @FXML
-    void buttonRestart(ActionEvent event) {
+	@FXML
+	void buttonRestart(ActionEvent event) {
 
-    		try {
-    			FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Final.fxml"));
-    			Parent gameScene = (Parent) fxmlLoader.load();
-    			Stage stage = new Stage();
-    			stage.setScene(new Scene(gameScene));  
-    			stage.show();
+		try {
+			FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("SinglePlayer.fxml"));
+			Parent gameScene = (Parent) fxmlLoader.load();
+			Stage stage = new Stage();
+			stage.setScene(new Scene(gameScene));  
+			stage.show();
 
-    		} catch(Exception e) 
-    		{
-    			System.out.println("Error Reloading TicTacToe Board!");
-    		}
-    }
+		} catch(Exception e) 
+		{
+			System.out.println("Error Reloading TicTacToe Board!");
+		}
+	}
+	public void findDraw() {
+		if ((textField1.getText().equals("X") || textField1.getText().equals("O")) && 
+				(textField2.getText().equals("X") || textField2.getText().equals("O")) &&
+				(textField3.getText().equals("X") || textField3.getText().equals("O")) &&
+				(textField4.getText().equals("X") || textField4.getText().equals("O")) &&
+				(textField5.getText().equals("X") || textField5.getText().equals("O")) &&
+				(textField6.getText().equals("X") || textField6.getText().equals("O")) &&
+				(textField7.getText().equals("X") || textField7.getText().equals("O")) &&
+				(textField8.getText().equals("X") || textField8.getText().equals("O")) &&
+				(textField9.getText().equals("X") || textField9.getText().equals("O"))){
+			DrawSlide();
+		}
+	}
+
 	public void findWinner(){
-		
+
 		//Row 1
 		if (textField1.getText().equals(textField2.getText()) 
-			&&	(textField2.getText().equals( textField3.getText()))){
+				&&	(textField2.getText().equals( textField3.getText()))){
 			System.out.println("Winner Test 1");
 			WinnerSlide();
 		}
@@ -615,9 +648,9 @@ public class TicTacToeController {
 		}
 
 	}
-	public void WinnerSlide(){
+	public void DrawSlide() {
 		try {
-			FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Winner.fxml"));
+			FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Draw2.fxml"));
 			Parent gameScene = (Parent) fxmlLoader.load();
 			Stage stage = new Stage();
 			stage.setScene(new Scene(gameScene));  
@@ -625,7 +658,20 @@ public class TicTacToeController {
 
 		} catch(Exception e) 
 		{
-			System.out.println("Error Loading Class WinnerPage!");
+			System.out.println("Error Loading Scene Draw2!");
+		}	
+	}
+	public void WinnerSlide(){
+		try {
+			FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Winner2.fxml"));
+			Parent gameScene = (Parent) fxmlLoader.load();
+			Stage stage = new Stage();
+			stage.setScene(new Scene(gameScene));  
+			stage.show();
+
+		} catch(Exception e) 
+		{
+			System.out.println("Error Loading Scene Winner2!");
 		}		
 	}
 	@FXML

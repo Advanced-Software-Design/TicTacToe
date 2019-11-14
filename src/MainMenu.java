@@ -19,14 +19,17 @@ public class MainMenu {
 	private URL location;
 
 	@FXML
-	private Button playButton;
+	private Button twoPlayerButton;
+	
+	@FXML
+	private Button singlePlayerButton;
 
 	@FXML
 	private Button quitButton;
 
 
 	@FXML
-	void playButton(ActionEvent event) throws IOException 
+	void twoPlayerButton(ActionEvent event) throws IOException 
 	{
 		try {
 			FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Final.fxml"));
@@ -37,7 +40,22 @@ public class MainMenu {
 
 		} catch(Exception e) 
 		{
-			System.out.println("Error Loading Class MainMenu!");
+			System.out.println("Error Loading Scene Final.fxml!");
+		}
+	}
+	@FXML
+	void singlePlayerButton(ActionEvent event) throws IOException 
+	{
+		try {
+			FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("SinglePlayer.fxml"));
+			Parent gameScene = (Parent) fxmlLoader.load();
+			Stage stage = new Stage();
+			stage.setScene(new Scene(gameScene));  
+			stage.show();
+
+		} catch(Exception e) 
+		{
+			System.out.println("Error Loading Scene SinglePlayer.fxml!");
 		}
 	}
 
@@ -48,8 +66,9 @@ public class MainMenu {
 
 	@FXML
 	void initialize() {
-		assert playButton != null : "fx:id=\"playButton\" was not injected: check your FXML file 'MainMenu.fxml'.";
+		assert twoPlayerButton != null : "fx:id=\"twoPlayerButton\" was not injected: check your FXML file 'MainMenu.fxml'.";
 		assert quitButton != null : "fx:id=\"quitButton\" was not injected: check your FXML file 'MainMenu.fxml'.";
+        assert singlePlayerButton != null : "fx:id=\"singlePlayerButton\" was not injected: check your FXML file 'MainMenu.fxml'.";
 
 	}
 }
