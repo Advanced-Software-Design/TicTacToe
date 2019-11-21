@@ -20,9 +20,12 @@ public class MainMenu {
 
 	@FXML
 	private Button twoPlayerButton;
-	
+
 	@FXML
 	private Button singlePlayerButton;
+
+	@FXML
+	private Button htpButton;
 
 	@FXML
 	private Button quitButton;
@@ -32,7 +35,7 @@ public class MainMenu {
 	void twoPlayerButton(ActionEvent event) throws IOException 
 	{
 		try {
-			FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Final.fxml"));
+			FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("TwoPlayer.fxml"));
 			Parent gameScene = (Parent) fxmlLoader.load();
 			Stage stage = new Stage();
 			stage.setScene(new Scene(gameScene));  
@@ -40,7 +43,7 @@ public class MainMenu {
 
 		} catch(Exception e) 
 		{
-			System.out.println("Error Loading Scene Final.fxml!");
+			System.out.println("Error Loading Scene TwoPlayer.fxml!");
 		}
 	}
 	@FXML
@@ -60,6 +63,36 @@ public class MainMenu {
 	}
 
 	@FXML
+	void htpButton(ActionEvent event) throws IOException 
+	{
+		try {
+			FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("HowToPlay.fxml"));
+			Parent gameScene = (Parent) fxmlLoader.load();
+			Stage stage = new Stage();
+			stage.setScene(new Scene(gameScene));  
+			stage.show();
+
+		} catch(Exception e) 
+		{
+			System.out.println("Error Loading Scene HowToPlay.fxml!");
+		}
+	}
+	@FXML
+	void backButton(ActionEvent event) throws IOException 
+	{
+		try {
+			FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("MainMenu.fxml"));
+			Parent gameScene = (Parent) fxmlLoader.load();
+			Stage stage = new Stage();
+			stage.setScene(new Scene(gameScene));  
+			stage.show();
+
+		} catch(Exception e) 
+		{
+			System.out.println("Error Loading Scene MainMenu.fxml from How to Play!");
+		}
+	}
+	@FXML
 	void quitButton(ActionEvent event) {
 		System.exit(0);
 	}
@@ -68,7 +101,7 @@ public class MainMenu {
 	void initialize() {
 		assert twoPlayerButton != null : "fx:id=\"twoPlayerButton\" was not injected: check your FXML file 'MainMenu.fxml'.";
 		assert quitButton != null : "fx:id=\"quitButton\" was not injected: check your FXML file 'MainMenu.fxml'.";
-        assert singlePlayerButton != null : "fx:id=\"singlePlayerButton\" was not injected: check your FXML file 'MainMenu.fxml'.";
+		assert singlePlayerButton != null : "fx:id=\"singlePlayerButton\" was not injected: check your FXML file 'MainMenu.fxml'.";
 
 	}
 }

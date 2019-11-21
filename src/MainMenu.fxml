@@ -26,5 +26,6 @@
       <Button fx:id="quitButton" mnemonicParsing="false" onAction="#quitButton" text="Quit" GridPane.rowIndex="3" />
       <Button fx:id="singlePlayerButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#singlePlayerButton" prefHeight="27.0" prefWidth="121.0" text="Single Player" textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="BASELINE" />
       <Button fx:id="twoPlayerButton" alignment="CENTER" mnemonicParsing="false" onAction="#twoPlayerButton" prefHeight="27.0" prefWidth="121.0" text="Two Player" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+      <Button fx:id="htpButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#htpButton" prefHeight="27.0" prefWidth="121.0" text="How To Play" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
    </children>
 </GridPane>

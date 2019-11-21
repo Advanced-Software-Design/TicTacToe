@@ -10,11 +10,10 @@ public class TicTacToe extends Application {
 		Parent root = 
 				FXMLLoader.load(getClass().getResource("MainMenu.fxml"));
 
-		Scene scene = new Scene(root); // attach scene graph to scene
-		stage.setTitle("TicTacToe"); // displayed in window's title bar
-		stage.setScene(scene); // attach scene to stage
+		Scene scene = new Scene(root);
+		stage.setTitle("TicTacToe");
+		stage.setScene(scene);
 		stage.show(); 
-		// display the stage
 	}
 
 	public static void main(String[] args) {
