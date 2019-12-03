@@ -96,13 +96,13 @@ public class TwoPlayerController {
 
 	@FXML
 	private Button button18;
-	
+
 	@FXML
 	private Button buttonTwoPlayerX;
 
 	@FXML
 	private Button buttonTwoPlayerO;
-	
+
 	int x = 0;
 
 	@FXML
@@ -118,7 +118,7 @@ public class TwoPlayerController {
 		buttonTwoPlayerO.setDisable(true);
 		buttonTwoPlayerX.setDisable(true);
 	}
-	
+
 	@FXML
 	void button1Press(ActionEvent event) { 
 		if (x == 1) {textField1.setText("X");}
@@ -392,29 +392,29 @@ public class TwoPlayerController {
 		}		
 	}
 
-	 @FXML
-	    void initialize() {
-	        assert textField1 != null : "fx:id=\"textField1\" was not injected: check your FXML file 'TwoPlayer.fxml'.";
-	        assert textField2 != null : "fx:id=\"textField2\" was not injected: check your FXML file 'TwoPlayer.fxml'.";
-	        assert textField3 != null : "fx:id=\"textField3\" was not injected: check your FXML file 'TwoPlayer.fxml'.";
-	        assert textField4 != null : "fx:id=\"textField4\" was not injected: check your FXML file 'TwoPlayer.fxml'.";
-	        assert textField5 != null : "fx:id=\"textField5\" was not injected: check your FXML file 'TwoPlayer.fxml'.";
-	        assert textField6 != null : "fx:id=\"textField6\" was not injected: check your FXML file 'TwoPlayer.fxml'.";
-	        assert textField7 != null : "fx:id=\"textField7\" was not injected: check your FXML file 'TwoPlayer.fxml'.";
-	        assert textField8 != null : "fx:id=\"textField8\" was not injected: check your FXML file 'TwoPlayer.fxml'.";
-	        assert textField9 != null : "fx:id=\"textField9\" was not injected: check your FXML file 'TwoPlayer.fxml'.";
-	        assert quitButton != null : "fx:id=\"quitButton\" was not injected: check your FXML file 'TwoPlayer.fxml'.";
-	        assert button1 != null : "fx:id=\"button1\" was not injected: check your FXML file 'TwoPlayer.fxml'.";
-	        assert button2 != null : "fx:id=\"button2\" was not injected: check your FXML file 'TwoPlayer.fxml'.";
-	        assert button3 != null : "fx:id=\"button3\" was not injected: check your FXML file 'TwoPlayer.fxml'.";
-	        assert button4 != null : "fx:id=\"button4\" was not injected: check your FXML file 'TwoPlayer.fxml'.";
-	        assert button5 != null : "fx:id=\"button5\" was not injected: check your FXML file 'TwoPlayer.fxml'.";
-	        assert button6 != null : "fx:id=\"button6\" was not injected: check your FXML file 'TwoPlayer.fxml'.";
-	        assert button7 != null : "fx:id=\"button7\" was not injected: check your FXML file 'TwoPlayer.fxml'.";
-	        assert button8 != null : "fx:id=\"button8\" was not injected: check your FXML file 'TwoPlayer.fxml'.";
-	        assert button9 != null : "fx:id=\"button9\" was not injected: check your FXML file 'TwoPlayer.fxml'.";
-	        assert buttonTwoPlayerX != null : "fx:id=\"buttonSinglePlayerX\" was not injected: check your FXML file 'TwoPlayer.fxml'.";
-	        assert buttonTwoPlayerO != null : "fx:id=\"buttonSinglePlayerO\" was not injected: check your FXML file 'TwoPlayer.fxml'.";
+	@FXML
+	void initialize() {
+		assert textField1 != null : "fx:id=\"textField1\" was not injected: check your FXML file 'TwoPlayer.fxml'.";
+		assert textField2 != null : "fx:id=\"textField2\" was not injected: check your FXML file 'TwoPlayer.fxml'.";
+		assert textField3 != null : "fx:id=\"textField3\" was not injected: check your FXML file 'TwoPlayer.fxml'.";
+		assert textField4 != null : "fx:id=\"textField4\" was not injected: check your FXML file 'TwoPlayer.fxml'.";
+		assert textField5 != null : "fx:id=\"textField5\" was not injected: check your FXML file 'TwoPlayer.fxml'.";
+		assert textField6 != null : "fx:id=\"textField6\" was not injected: check your FXML file 'TwoPlayer.fxml'.";
+		assert textField7 != null : "fx:id=\"textField7\" was not injected: check your FXML file 'TwoPlayer.fxml'.";
+		assert textField8 != null : "fx:id=\"textField8\" was not injected: check your FXML file 'TwoPlayer.fxml'.";
+		assert textField9 != null : "fx:id=\"textField9\" was not injected: check your FXML file 'TwoPlayer.fxml'.";
+		assert quitButton != null : "fx:id=\"quitButton\" was not injected: check your FXML file 'TwoPlayer.fxml'.";
+		assert button1 != null : "fx:id=\"button1\" was not injected: check your FXML file 'TwoPlayer.fxml'.";
+		assert button2 != null : "fx:id=\"button2\" was not injected: check your FXML file 'TwoPlayer.fxml'.";
+		assert button3 != null : "fx:id=\"button3\" was not injected: check your FXML file 'TwoPlayer.fxml'.";
+		assert button4 != null : "fx:id=\"button4\" was not injected: check your FXML file 'TwoPlayer.fxml'.";
+		assert button5 != null : "fx:id=\"button5\" was not injected: check your FXML file 'TwoPlayer.fxml'.";
+		assert button6 != null : "fx:id=\"button6\" was not injected: check your FXML file 'TwoPlayer.fxml'.";
+		assert button7 != null : "fx:id=\"button7\" was not injected: check your FXML file 'TwoPlayer.fxml'.";
+		assert button8 != null : "fx:id=\"button8\" was not injected: check your FXML file 'TwoPlayer.fxml'.";
+		assert button9 != null : "fx:id=\"button9\" was not injected: check your FXML file 'TwoPlayer.fxml'.";
+		assert buttonTwoPlayerX != null : "fx:id=\"buttonSinglePlayerX\" was not injected: check your FXML file 'TwoPlayer.fxml'.";
+		assert buttonTwoPlayerO != null : "fx:id=\"buttonSinglePlayerO\" was not injected: check your FXML file 'TwoPlayer.fxml'.";
 
-	    }
+	}
 }

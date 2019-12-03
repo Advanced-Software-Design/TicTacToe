@@ -6,6 +6,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
+import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
 
@@ -13,7 +14,6 @@ public class SinglePlayerController {
 
 	@FXML
 	GridPane gameBoard;
-
 
 	@FXML
 	private TextField textField1;
@@ -245,7 +245,6 @@ public class SinglePlayerController {
 			Stage stage = new Stage();
 			stage.setScene(new Scene(gameScene));  
 			stage.show();
-
 		} catch(Exception e) 
 		{
 			System.out.println("Error Reloading TicTacToe Board!");
@@ -394,27 +393,27 @@ public class SinglePlayerController {
 		}		
 	}
 
-@FXML
-void initialize() {
-	assert button1 != null : "fx:id=\"button1\" was not injected: check your FXML file 'SinglePlayer.fxml'.";
-	assert button2 != null : "fx:id=\"button2\" was not injected: check your FXML file 'SinglePlayer.fxml'.";
-	assert button3 != null : "fx:id=\"button3\" was not injected: check your FXML file 'SinglePlayer.fxml'.";
-	assert button4 != null : "fx:id=\"button4\" was not injected: check your FXML file 'SinglePlayer.fxml'.";
-	assert button5 != null : "fx:id=\"button5\" was not injected: check your FXML file 'SinglePlayer.fxml'.";
-	assert button6 != null : "fx:id=\"button6\" was not injected: check your FXML file 'SinglePlayer.fxml'.";
-	assert button7 != null : "fx:id=\"button7\" was not injected: check your FXML file 'SinglePlayer.fxml'.";
-	assert button8 != null : "fx:id=\"button8\" was not injected: check your FXML file 'SinglePlayer.fxml'.";
-	assert button9 != null : "fx:id=\"button9\" was not injected: check your FXML file 'SinglePlayer.fxml'.";
-	assert textField1 != null : "fx:id=\"textField1\" was not injected: check your FXML file 'SinglePlayer.fxml'.";
-	assert textField2 != null : "fx:id=\"textField2\" was not injected: check your FXML file 'SinglePlayer.fxml'.";
-	assert textField3 != null : "fx:id=\"textField3\" was not injected: check your FXML file 'SinglePlayer.fxml'.";
-	assert textField4 != null : "fx:id=\"textField4\" was not injected: check your FXML file 'SinglePlayer.fxml'.";
-	assert textField5 != null : "fx:id=\"textField5\" was not injected: check your FXML file 'SinglePlayer.fxml'.";
-	assert textField6 != null : "fx:id=\"textField6\" was not injected: check your FXML file 'SinglePlayer.fxml'.";
-	assert textField7 != null : "fx:id=\"textField7\" was not injected: check your FXML file 'SinglePlayer.fxml'.";
-	assert textField8 != null : "fx:id=\"textField8\" was not injected: check your FXML file 'SinglePlayer.fxml'.";
-	assert textField9 != null : "fx:id=\"textField9\" was not injected: check your FXML file 'SinglePlayer.fxml'.";
-	assert buttonSinglePlayerX != null : "fx:id=\"buttonSinglePlayerX\" was not injected: check your FXML file 'SinglePlayer.fxml'.";
-	assert buttonSinglePlayerO != null : "fx:id=\"buttonSinglePlayerO\" was not injected: check your FXML file 'SinglePlayer.fxml'.";
-}
+	@FXML
+	void initialize() {
+		assert button1 != null : "fx:id=\"button1\" was not injected: check your FXML file 'SinglePlayer.fxml'.";
+		assert button2 != null : "fx:id=\"button2\" was not injected: check your FXML file 'SinglePlayer.fxml'.";
+		assert button3 != null : "fx:id=\"button3\" was not injected: check your FXML file 'SinglePlayer.fxml'.";
+		assert button4 != null : "fx:id=\"button4\" was not injected: check your FXML file 'SinglePlayer.fxml'.";
+		assert button5 != null : "fx:id=\"button5\" was not injected: check your FXML file 'SinglePlayer.fxml'.";
+		assert button6 != null : "fx:id=\"button6\" was not injected: check your FXML file 'SinglePlayer.fxml'.";
+		assert button7 != null : "fx:id=\"button7\" was not injected: check your FXML file 'SinglePlayer.fxml'.";
+		assert button8 != null : "fx:id=\"button8\" was not injected: check your FXML file 'SinglePlayer.fxml'.";
+		assert button9 != null : "fx:id=\"button9\" was not injected: check your FXML file 'SinglePlayer.fxml'.";
+		assert textField1 != null : "fx:id=\"textField1\" was not injected: check your FXML file 'SinglePlayer.fxml'.";
+		assert textField2 != null : "fx:id=\"textField2\" was not injected: check your FXML file 'SinglePlayer.fxml'.";
+		assert textField3 != null : "fx:id=\"textField3\" was not injected: check your FXML file 'SinglePlayer.fxml'.";
+		assert textField4 != null : "fx:id=\"textField4\" was not injected: check your FXML file 'SinglePlayer.fxml'.";
+		assert textField5 != null : "fx:id=\"textField5\" was not injected: check your FXML file 'SinglePlayer.fxml'.";
+		assert textField6 != null : "fx:id=\"textField6\" was not injected: check your FXML file 'SinglePlayer.fxml'.";
+		assert textField7 != null : "fx:id=\"textField7\" was not injected: check your FXML file 'SinglePlayer.fxml'.";
+		assert textField8 != null : "fx:id=\"textField8\" was not injected: check your FXML file 'SinglePlayer.fxml'.";
+		assert textField9 != null : "fx:id=\"textField9\" was not injected: check your FXML file 'SinglePlayer.fxml'.";
+		assert buttonSinglePlayerX != null : "fx:id=\"buttonSinglePlayerX\" was not injected: check your FXML file 'SinglePlayer.fxml'.";
+		assert buttonSinglePlayerO != null : "fx:id=\"buttonSinglePlayerO\" was not injected: check your FXML file 'SinglePlayer.fxml'.";
+	}
 }
