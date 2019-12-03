@@ -1,18 +1,23 @@
+import java.io.IOException;
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
-import javafx.stage.Stage;
+import javafx.scene.layout.Pane;
 
 public class TwoPlayerController {
-
 	@FXML
-	GridPane gameBoard;
-
+	GridPane twoplayer;
+	@FXML
+	Pane winner;
+	@FXML
+	Pane Draw;
+	@FXML
+	private AnchorPane MainMenu;
 	@FXML
 	private TextField textField1;
 
@@ -104,7 +109,17 @@ public class TwoPlayerController {
 	private Button buttonTwoPlayerO;
 
 	int x = 0;
-
+	
+	@FXML
+	void MainMenuDraw(ActionEvent event)  throws IOException {
+		AnchorPane getmainmenu = FXMLLoader.load(getClass().getResource("MainMenu.fxml"));
+		Draw.getChildren().setAll(getmainmenu);
+	}
+	@FXML
+	void MainMenuWinner(ActionEvent event) throws IOException {
+		AnchorPane getmainmenu = FXMLLoader.load(getClass().getResource("MainMenu.fxml"));
+		winner.getChildren().setAll(getmainmenu);
+	}
 	@FXML
 	void buttonTwoPlayerO(ActionEvent event) {
 		x = 0;
@@ -239,12 +254,8 @@ public class TwoPlayerController {
 	void buttonRestart(ActionEvent event) {
 
 		try {
-			FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("TwoPlayer.fxml"));
-			Parent gameScene = (Parent) fxmlLoader.load();
-			Stage stage = new Stage();
-			stage.setScene(new Scene(gameScene));  
-			stage.show();
-
+			GridPane gettwoplayer = FXMLLoader.load(getClass().getResource("TwoPlayer.fxml"));
+			winner.getChildren().setAll(gettwoplayer);
 		} catch(Exception e) 
 		{
 			System.out.println("Error Reloading TicTacToe Board!");
@@ -367,11 +378,8 @@ public class TwoPlayerController {
 	}
 	public void DrawSlide() {
 		try {
-			FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Draw.fxml"));
-			Parent gameScene = (Parent) fxmlLoader.load();
-			Stage stage = new Stage();
-			stage.setScene(new Scene(gameScene));  
-			stage.show();
+			Pane getdraw = FXMLLoader.load(getClass().getResource("Draw.fxml"));
+			twoplayer.getChildren().setAll(getdraw);
 
 		} catch(Exception e) 
 		{
@@ -380,11 +388,8 @@ public class TwoPlayerController {
 	}
 	public void WinnerSlide(){
 		try {
-			FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Winner.fxml"));
-			Parent gameScene = (Parent) fxmlLoader.load();
-			Stage stage = new Stage();
-			stage.setScene(new Scene(gameScene));  
-			stage.show();
+			Pane getsingleplayer = FXMLLoader.load(getClass().getResource("Winner.fxml"));
+			twoplayer.getChildren().setAll(getsingleplayer);
 
 		} catch(Exception e) 
 		{

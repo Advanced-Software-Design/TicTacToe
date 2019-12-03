@@ -4,14 +4,20 @@ import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.stage.Stage;
-
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.GridPane;
+import javafx.scene.layout.Pane;
 
 public class MainMenu {
-
+	@FXML
+	Pane htp;
+	@FXML
+	GridPane singleplayer;
+	@FXML
+	GridPane twoplayer;
+	@FXML
+	private AnchorPane MainMenu;
 	@FXML
 	private ResourceBundle resources;
 
@@ -35,11 +41,8 @@ public class MainMenu {
 	void twoPlayerButton(ActionEvent event) throws IOException 
 	{
 		try {
-			FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("TwoPlayer.fxml"));
-			Parent gameScene = (Parent) fxmlLoader.load();
-			Stage stage = new Stage();
-			stage.setScene(new Scene(gameScene));  
-			stage.show();
+			GridPane getTwoPlayer = FXMLLoader.load(getClass().getResource("TwoPlayer.fxml"));
+            MainMenu.getChildren().setAll(getTwoPlayer);
 
 		} catch(Exception e) 
 		{
@@ -50,11 +53,8 @@ public class MainMenu {
 	void singlePlayerButton(ActionEvent event) throws IOException 
 	{
 		try {
-			FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("SinglePlayer.fxml"));
-			Parent gameScene = (Parent) fxmlLoader.load();
-			Stage stage = new Stage();
-			stage.setScene(new Scene(gameScene));  
-			stage.show();
+			GridPane getSinglePlayer = FXMLLoader.load(getClass().getResource("SinglePlayer.fxml"));
+            MainMenu.getChildren().setAll(getSinglePlayer);
 
 		} catch(Exception e) 
 		{
@@ -66,11 +66,8 @@ public class MainMenu {
 	void htpButton(ActionEvent event) throws IOException 
 	{
 		try {
-			FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("HowToPlay.fxml"));
-			Parent gameScene = (Parent) fxmlLoader.load();
-			Stage stage = new Stage();
-			stage.setScene(new Scene(gameScene));  
-			stage.show();
+			Pane getHowToPlay = FXMLLoader.load(getClass().getResource("HowToPlay.fxml"));
+            MainMenu.getChildren().setAll(getHowToPlay);
 
 		} catch(Exception e) 
 		{
@@ -81,11 +78,8 @@ public class MainMenu {
 	void backButton(ActionEvent event) throws IOException 
 	{
 		try {
-			FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("MainMenu.fxml"));
-			Parent gameScene = (Parent) fxmlLoader.load();
-			Stage stage = new Stage();
-			stage.setScene(new Scene(gameScene));  
-			stage.show();
+			AnchorPane getMainMenu = FXMLLoader.load(getClass().getResource("MainMenu.fxml"));
+			htp.getChildren().setAll(getMainMenu);
 
 		} catch(Exception e) 
 		{

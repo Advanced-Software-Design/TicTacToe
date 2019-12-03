@@ -1,46 +1,50 @@
+import java.io.IOException;
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Pane;
-import javafx.stage.Stage;
-
 
 public class SinglePlayerController {
+	@FXML
+	GridPane singleplayer;
+	@FXML
+	Pane winner2;
+	@FXML
+	Pane Draw2;
+	@FXML
+	private AnchorPane MainMenu;
 
 	@FXML
-	GridPane gameBoard;
+	private TextField textField1 = null;
 
 	@FXML
-	private TextField textField1;
+	private TextField textField2 = null;
 
 	@FXML
-	private TextField textField2;
+	private TextField textField3 = null;
 
 	@FXML
-	private TextField textField3;
+	private TextField textField4 = null;
 
 	@FXML
-	private TextField textField4;
+	private TextField textField5 = null;
 
 	@FXML
-	private TextField textField5;
+	private TextField textField6 = null;
 
 	@FXML
-	private TextField textField6;
+	private TextField textField7 = null;
 
 	@FXML
-	private TextField textField7;
+	private TextField textField8 = null;
 
 	@FXML
-	private TextField textField8;
-
-	@FXML
-	private TextField textField9;
+	private TextField textField9 = null;
 
 	@FXML
 	private Button quitButton;
@@ -106,7 +110,16 @@ public class SinglePlayerController {
 	private Button buttonSinglePlayerO;
 
 	int x = 0;
-
+	
+	void MainMenuDraw2(ActionEvent event) throws IOException {
+		AnchorPane getmainmenu = FXMLLoader.load(getClass().getResource("MainMenu.fxml"));
+		Draw2.getChildren().setAll(getmainmenu);
+	}
+	@FXML
+	void MainMenuWinner2(ActionEvent event) throws IOException {
+		AnchorPane getmainmenu = FXMLLoader.load(getClass().getResource("MainMenu.fxml"));
+		winner2.getChildren().setAll(getmainmenu);
+	}
 	@FXML
 	void buttonSinglePlayerO(ActionEvent event) {
 		x = 0;
@@ -240,11 +253,8 @@ public class SinglePlayerController {
 	void buttonRestart(ActionEvent event) {
 
 		try {
-			FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("SinglePlayer.fxml"));
-			Parent gameScene = (Parent) fxmlLoader.load();
-			Stage stage = new Stage();
-			stage.setScene(new Scene(gameScene));  
-			stage.show();
+			GridPane getsingleplayer = FXMLLoader.load(getClass().getResource("SinglePlayer.fxml"));
+			winner2.getChildren().setAll(getsingleplayer);
 		} catch(Exception e) 
 		{
 			System.out.println("Error Reloading TicTacToe Board!");
@@ -305,7 +315,9 @@ public class SinglePlayerController {
 			DrawSlide();
 		}
 	}
+	public void AI() {
 
+	}
 	public void findWinner(){
 
 		//Row 1
@@ -368,11 +380,8 @@ public class SinglePlayerController {
 	}
 	public void DrawSlide() {
 		try {
-			FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Draw2.fxml"));
-			Parent gameScene = (Parent) fxmlLoader.load();
-			Stage stage = new Stage();
-			stage.setScene(new Scene(gameScene));  
-			stage.show();
+			Pane getdraw2 = FXMLLoader.load(getClass().getResource("Draw2.fxml"));
+			singleplayer.getChildren().setAll(getdraw2);
 
 		} catch(Exception e) 
 		{
@@ -381,11 +390,8 @@ public class SinglePlayerController {
 	}
 	public void WinnerSlide(){
 		try {
-			FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Winner2.fxml"));
-			Parent gameScene = (Parent) fxmlLoader.load();
-			Stage stage = new Stage();
-			stage.setScene(new Scene(gameScene));  
-			stage.show();
+			Pane getwinner = FXMLLoader.load(getClass().getResource("Winner2.fxml"));
+			singleplayer.getChildren().setAll(getwinner);
 
 		} catch(Exception e) 
 		{

@@ -14,5 +14,6 @@
       </Text>
       <Button layoutX="69.0" layoutY="332.0" mnemonicParsing="false" onAction="#buttonQuitWinner" prefHeight="27.0" prefWidth="72.0" text="Quit" />
       <Button layoutX="452.0" layoutY="332.0" mnemonicParsing="false" onAction="#buttonRestart" text="Restart" />
+      <Button fx:id="MainMenuDraw2" layoutX="273.0" layoutY="332.0" mnemonicParsing="false" onAction="#MainMenuDraw2" text="Main Menu" />
    </children>
 </Pane>
