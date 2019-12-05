@@ -12,6 +12,8 @@ import javafx.scene.layout.Pane;
 
 public class SinglePlayerController {
 	@FXML
+	Pane loser;
+	@FXML
 	GridPane singleplayer;
 	@FXML
 	Pane winner2;
@@ -76,7 +78,6 @@ public class SinglePlayerController {
 
 	@FXML
 	private Button button9;
-
 
 	@FXML
 	private Button buttonSinglePlayerX;
@@ -234,11 +235,11 @@ public class SinglePlayerController {
 		if (x == 1) {textField1.setText("X");}
 		if (x == 0) {textField1.setText("O");}
 		button1.setDisable(true);
-		findWinner();
 		switchTurns();
 		setButtonText();
-		findDraw();
 		compTurn();
+		findWinner();
+		findDraw();
 	}
 
 	@FXML
@@ -246,11 +247,11 @@ public class SinglePlayerController {
 		if (x == 1) {textField2.setText("X");}
 		if (x == 0) {textField2.setText("O");}
 		button2.setDisable(true);
-		findWinner();
 		switchTurns();
 		setButtonText();
-		findDraw();
 		compTurn();
+		findWinner();
+		findDraw();
 
 	}
 
@@ -259,11 +260,11 @@ public class SinglePlayerController {
 		if (x == 1) {textField3.setText("X");}
 		if (x == 0) {textField3.setText("O");}
 		button3.setDisable(true);
-		findWinner();
 		switchTurns();
 		setButtonText();
-		findDraw();
 		compTurn();
+		findWinner();
+		findDraw();
 
 	}
 
@@ -272,11 +273,11 @@ public class SinglePlayerController {
 		if (x == 1) {textField4.setText("X");}
 		if (x == 0) {textField4.setText("O");}
 		button4.setDisable(true);
-		findWinner();
 		switchTurns();
 		setButtonText();
-		findDraw();
 		compTurn();
+		findWinner();
+		findDraw();
 
 	}
 
@@ -285,11 +286,11 @@ public class SinglePlayerController {
 		if (x == 1) {textField5.setText("X");}
 		if (x == 0) {textField5.setText("O");}
 		button5.setDisable(true);
-		findWinner();
 		switchTurns();
 		setButtonText();
-		findDraw();
 		compTurn();
+		findWinner();
+		findDraw();
 
 	}
 
@@ -298,11 +299,11 @@ public class SinglePlayerController {
 		if (x == 1) {textField6.setText("X");}
 		if (x == 0) {textField6.setText("O");}
 		button6.setDisable(true);
-		findWinner();
 		switchTurns();
 		setButtonText();
-		findDraw();
 		compTurn();
+		findWinner();
+		findDraw();
 
 	}
 
@@ -311,11 +312,11 @@ public class SinglePlayerController {
 		if (x == 1) {textField7.setText("X");}
 		if (x == 0) {textField7.setText("O");}
 		button7.setDisable(true);
-		findWinner();
 		switchTurns();
 		setButtonText();
-		findDraw();
 		compTurn();
+		findWinner();
+		findDraw();
 
 	}
 
@@ -324,11 +325,11 @@ public class SinglePlayerController {
 		if (x == 1) {textField8.setText("X");}
 		if (x == 0) {textField8.setText("O");}
 		button8.setDisable(true);
-		findWinner();
 		switchTurns();
 		setButtonText();
-		findDraw();
 		compTurn();
+		findWinner();
+		findDraw();
 
 	}
 
@@ -337,12 +338,11 @@ public class SinglePlayerController {
 		if (x == 1) {textField9.setText("X");}
 		if (x == 0) {textField9.setText("O");}
 		button9.setDisable(true);
-		findWinner();
 		switchTurns();
 		setButtonText();
-		findDraw();
 		compTurn();
-
+		findWinner();
+		findDraw();
 	}
 
 	@FXML
@@ -351,16 +351,38 @@ public class SinglePlayerController {
 	}
 
 	@FXML
-	void buttonQuitWinner(ActionEvent event) {
+	void buttonQuitWinner2(ActionEvent event) {
 		System.exit(0);
 	}
 
 	@FXML
-	void buttonRestart(ActionEvent event) {
+	void buttonWinRestart(ActionEvent event) {
 
 		try {
 			GridPane getsingleplayer = FXMLLoader.load(getClass().getResource("SinglePlayer.fxml"));
 			winner2.getChildren().setAll(getsingleplayer);
+		} catch(Exception e) 
+		{
+			System.out.println("Error Reloading TicTacToe Board!");
+		}
+	}
+
+	@FXML
+	void MainMenuLoser(ActionEvent event) throws IOException {
+		AnchorPane getmainmenu = FXMLLoader.load(getClass().getResource("MainMenu.fxml"));
+		loser.getChildren().setAll(getmainmenu);
+	}
+
+	@FXML
+	void buttonQuitLoser(ActionEvent event) {
+		System.exit(0);
+	}
+
+	@FXML
+	void buttonLoserRestart(ActionEvent event) {
+		try {
+			GridPane getrestartsingle = FXMLLoader.load(getClass().getResource("SinglePlayer.fxml"));
+			loser.getChildren().setAll(getrestartsingle);
 		} catch(Exception e) 
 		{
 			System.out.println("Error Reloading TicTacToe Board!");
@@ -407,6 +429,99 @@ public class SinglePlayerController {
 			button9.setText("O");
 		}
 	}
+	public void findWinner(){
+
+		//Row 1
+		if (textField1.getText().equals("X") 
+				&&	(textField2.getText().equals("X") && (textField3.getText().equals("X")))){
+			System.out.println("Winner Test 1");
+			WinnerSlide();
+		}
+		else if (textField1.getText().equals("O") 
+				&&	(textField2.getText().equals("O") && (textField3.getText().equals("O")))){
+			System.out.println("Loser Test 1");
+			LoserSlide();
+		}
+		//Row 2
+		if (textField4.getText().equals("X") 
+				&&	(textField5.getText().equals("X") && (textField6.getText().equals("X")))){
+			System.out.println("Winner Test 1");
+			WinnerSlide();
+		}
+		else if (textField4.getText().equals("O") 
+				&&	(textField5.getText().equals("O") && (textField6.getText().equals("O")))){
+			System.out.println("Loser Test 1");
+			LoserSlide();
+		}
+		//Row 3
+		if (textField7.getText().equals("X") 
+				&&	(textField8.getText().equals("X") && (textField9.getText().equals("X")))){
+			System.out.println("Winner Test 1");
+			WinnerSlide();
+		}
+		else if (textField7.getText().equals("O") 
+				&&	(textField8.getText().equals("O") && (textField9.getText().equals("O")))){
+			System.out.println("Loser Test 1");
+			LoserSlide();
+		}
+		//Column 1
+		if (textField1.getText().equals("X") 
+				&&	(textField4.getText().equals("X") && (textField7.getText().equals("X")))){
+			System.out.println("Winner Test 1");
+			WinnerSlide();
+		}
+		else if (textField1.getText().equals("O") 
+				&&	(textField4.getText().equals("O") && (textField7.getText().equals("O")))){
+			System.out.println("Loser Test 1");
+			LoserSlide();
+		}
+		//Column 2
+		if (textField2.getText().equals("X") 
+				&&	(textField5.getText().equals("X") && (textField8.getText().equals("X")))){
+			System.out.println("Winner Test 1");
+			WinnerSlide();
+		}
+		else if (textField2.getText().equals("O") 
+				&&	(textField5.getText().equals("O") && (textField8.getText().equals("O")))){
+			System.out.println("Loser Test 1");
+			LoserSlide();
+		}
+		//Column 3
+
+		if (textField3.getText().equals("X") 
+				&&	(textField6.getText().equals("X") && (textField9.getText().equals("X")))){
+			System.out.println("Winner Test 1");
+			WinnerSlide();
+		}
+		else if (textField3.getText().equals("O") 
+				&&	(textField6.getText().equals("O") && (textField9.getText().equals("O")))){
+			System.out.println("Loser Test 1");
+			LoserSlide();
+		}
+		//Diagonal 1
+		if (textField1.getText().equals("X") 
+				&&	(textField5.getText().equals("X") && (textField9.getText().equals("X")))){
+			System.out.println("Winner Test 1");
+			WinnerSlide();
+		}
+		else if (textField1.getText().equals("O") 
+				&&	(textField5.getText().equals("O") && (textField9.getText().equals("O")))){
+			System.out.println("Loser Test 1");
+			LoserSlide();
+		}
+		//Diagonal 2
+
+		if (textField3.getText().equals("X") 
+				&&	(textField5.getText().equals("X") && (textField7.getText().equals("X")))){
+			System.out.println("Winner Test 1");
+			WinnerSlide();
+		}
+		else if (textField3.getText().equals("O") 
+				&&	(textField5.getText().equals("O") && (textField7.getText().equals("O")))){
+			System.out.println("Loser Test 1");
+			LoserSlide();
+		}
+	}
 
 	public void findDraw() {
 		if ((textField1.getText().equals("X") || textField1.getText().equals("O")) && 
@@ -421,69 +536,7 @@ public class SinglePlayerController {
 			DrawSlide();
 		}
 	}
-	public void AI() {
 
-	}
-	public void findWinner(){
-
-		//Row 1
-		if (textField1.getText().equals(textField2.getText()) 
-				&&	(textField2.getText().equals( textField3.getText()))){
-			System.out.println("Winner Test 1");
-			WinnerSlide();
-		}
-		//Row 2
-		if (textField4.getText().equals(textField5.getText()) 
-				&& textField5.getText().equals(textField6.getText())){
-			System.out.println("Winner Test 2");
-
-			WinnerSlide();
-		}
-		//Row 3
-		if (textField7.getText().equals(textField8.getText())
-				&& textField8.getText().equals(textField9.getText())){
-			System.out.println("Winner Test 3");
-
-			WinnerSlide();
-		}
-		//Column 1
-		if (textField1.getText().equals(textField4.getText()) 
-				&& textField4.getText().equals(textField7.getText())){
-			System.out.println("Winner Test 4");
-
-			WinnerSlide();
-		}
-		//Column 2
-		if (textField2.getText().equals(textField5.getText())
-				&& textField5.getText().equals(textField8.getText())){
-			System.out.println("Winner Test 5");
-
-			WinnerSlide();
-		}
-		//Column 3
-		if (textField3.getText().equals(textField6.getText()) 
-				&& textField6.getText().equals(textField9.getText())){
-			System.out.println("Winner Test 6");
-
-			WinnerSlide();
-		}
-		//Diagonal 1
-		if (textField1.getText().equals(textField5.getText()) 
-				&& textField5.getText().equals(textField9.getText())){
-			System.out.println("Winner Test 7");
-
-			WinnerSlide();
-		}
-		//Diagonal 2
-		if (textField3.getText().equals(textField5.getText()) 
-				&& textField5.getText().equals(textField7.getText())){
-			System.out.println("Winner Test 8");
-
-			WinnerSlide();
-
-		}
-
-	}
 	public void DrawSlide() {
 		try {
 			Pane getdraw2 = FXMLLoader.load(getClass().getResource("Draw2.fxml"));
@@ -496,12 +549,23 @@ public class SinglePlayerController {
 	}
 	public void WinnerSlide(){
 		try {
-			Pane getwinner = FXMLLoader.load(getClass().getResource("Winner2.fxml"));
-			singleplayer.getChildren().setAll(getwinner);
+			Pane getWinner = FXMLLoader.load(getClass().getResource("Winner2.fxml"));
+			singleplayer.getChildren().setAll(getWinner);
 
 		} catch(Exception e) 
 		{
 			System.out.println("Error Loading Scene Winner2!");
+		}	
+	}
+
+	public void LoserSlide(){
+		try {
+			Pane getloser = FXMLLoader.load(getClass().getResource("Loser.fxml"));
+			singleplayer.getChildren().setAll(getloser);
+
+		} catch(Exception e) 
+		{
+			System.out.println("Error Loading Scene loser!");
 		}		
 	}
 

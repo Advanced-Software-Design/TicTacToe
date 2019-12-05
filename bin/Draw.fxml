@@ -13,7 +13,7 @@
          </font>
       </Text>
       <Button layoutX="69.0" layoutY="332.0" mnemonicParsing="false" onAction="#buttonQuitWinner" prefHeight="27.0" prefWidth="72.0" text="Quit" />
-      <Button layoutX="452.0" layoutY="332.0" mnemonicParsing="false" onAction="#buttonRestart" text="Restart" />
+      <Button layoutX="452.0" layoutY="332.0" mnemonicParsing="false" onAction="#buttonDrawRestart" text="Restart" />
       <Button layoutX="273.0" layoutY="332.0" mnemonicParsing="false" onAction="#MainMenuDraw" text="Main Menu" />
    </children>
 </Pane>

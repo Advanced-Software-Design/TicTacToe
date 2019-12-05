@@ -136,9 +136,9 @@ public class TwoPlayerController {
 		if (x == 1) {textField3.setText("X");}
 		if (x == 0) {textField3.setText("O");}
 		button3.setDisable(true);
-		findWinner();
 		switchTurns();
 		setButtonText();
+		findWinner();
 		findDraw();
 
 	}
@@ -148,9 +148,9 @@ public class TwoPlayerController {
 		if (x == 1) {textField4.setText("X");}
 		if (x == 0) {textField4.setText("O");}
 		button4.setDisable(true);
-		findWinner();
 		switchTurns();
 		setButtonText();
+		findWinner();
 		findDraw();
 
 	}
@@ -160,9 +160,9 @@ public class TwoPlayerController {
 		if (x == 1) {textField5.setText("X");}
 		if (x == 0) {textField5.setText("O");}
 		button5.setDisable(true);
-		findWinner();
 		switchTurns();
 		setButtonText();
+		findWinner();
 		findDraw();
 
 	}
@@ -172,9 +172,9 @@ public class TwoPlayerController {
 		if (x == 1) {textField6.setText("X");}
 		if (x == 0) {textField6.setText("O");}
 		button6.setDisable(true);
-		findWinner();
 		switchTurns();
 		setButtonText();
+		findWinner();
 		findDraw();
 
 	}
@@ -184,9 +184,9 @@ public class TwoPlayerController {
 		if (x == 1) {textField7.setText("X");}
 		if (x == 0) {textField7.setText("O");}
 		button7.setDisable(true);
-		findWinner();
 		switchTurns();
 		setButtonText();
+		findWinner();
 		findDraw();
 	}
 
@@ -195,9 +195,9 @@ public class TwoPlayerController {
 		if (x == 1) {textField8.setText("X");}
 		if (x == 0) {textField8.setText("O");}
 		button8.setDisable(true);
-		findWinner();
 		switchTurns();
 		setButtonText();
+		findWinner();
 		findDraw();
 	}
 
@@ -206,9 +206,9 @@ public class TwoPlayerController {
 		if (x == 1) {textField9.setText("X");}
 		if (x == 0) {textField9.setText("O");}
 		button9.setDisable(true);
-		findWinner();
 		switchTurns();
 		setButtonText();
+		findWinner();
 		findDraw();
 	}
 
@@ -234,7 +234,17 @@ public class TwoPlayerController {
 			System.out.println("Error Reloading TicTacToe Board!");
 		}
 	}
+	@FXML
+	void buttonDrawRestart(ActionEvent event) {
 
+		try {
+			GridPane gettwoplayer = FXMLLoader.load(getClass().getResource("TwoPlayer.fxml"));
+			Draw.getChildren().setAll(gettwoplayer);
+		} catch(Exception e) 
+		{
+			System.out.println("Error Reloading TicTacToe Board!");
+		}
+	}
 	public void switchTurns()
 	{
 		if(x==1) {x = 0;}
@@ -276,19 +286,7 @@ public class TwoPlayerController {
 		}
 	}
 
-	public void findDraw() {
-		if ((textField1.getText().equals("X") || textField1.getText().equals("O")) && 
-				(textField2.getText().equals("X") || textField2.getText().equals("O")) &&
-				(textField3.getText().equals("X") || textField3.getText().equals("O")) &&
-				(textField4.getText().equals("X") || textField4.getText().equals("O")) &&
-				(textField5.getText().equals("X") || textField5.getText().equals("O")) &&
-				(textField6.getText().equals("X") || textField6.getText().equals("O")) &&
-				(textField7.getText().equals("X") || textField7.getText().equals("O")) &&
-				(textField8.getText().equals("X") || textField8.getText().equals("O")) &&
-				(textField9.getText().equals("X") || textField9.getText().equals("O"))){
-			DrawSlide();
-		}
-	}
+
 	public void findWinner(){
 
 		//Row 1
@@ -348,6 +346,19 @@ public class TwoPlayerController {
 
 		}
 
+	}	
+	public void findDraw() {
+		if ((textField1.getText().equals("X") || textField1.getText().equals("O")) && 
+				(textField2.getText().equals("X") || textField2.getText().equals("O")) &&
+				(textField3.getText().equals("X") || textField3.getText().equals("O")) &&
+				(textField4.getText().equals("X") || textField4.getText().equals("O")) &&
+				(textField5.getText().equals("X") || textField5.getText().equals("O")) &&
+				(textField6.getText().equals("X") || textField6.getText().equals("O")) &&
+				(textField7.getText().equals("X") || textField7.getText().equals("O")) &&
+				(textField8.getText().equals("X") || textField8.getText().equals("O")) &&
+				(textField9.getText().equals("X") || textField9.getText().equals("O"))){
+			DrawSlide();
+		}
 	}
 	public void DrawSlide() {
 		try {
