@@ -9,12 +9,12 @@
    <children>
       <Text layoutX="14.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Singel Player: You will be playing again the computer to be the first one to get 3 X's or 3 O's in a row. Simply click the box where you want to go. You can get them horizontally, vertically, or diagonally.  " wrappingWidth="385.00830078125">
          <font>
-            <Font size="24.0" />
+            <Font size="20.0" />
          </font>
       </Text>
-      <Text layoutX="14.0" layoutY="238.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Two Player: You will be playing head to head to be the first one to get 3 X's or 3 O's in a row. Simply click the box where you want to go. You can get the horizontally, vertically, or diagonally." wrappingWidth="385.00830078125">
+      <Text layoutX="14.0" layoutY="195.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Two Player: You will be playing head to head to be the first one to get 3 X's or 3 O's in a row. Simply click the box where you want to go. You can get the horizontally, vertically, or diagonally." wrappingWidth="385.00830078125">
          <font>
-            <Font size="24.0" />
+            <Font size="20.0" />
          </font>
       </Text>
       <Button fx:id="backButton" layoutX="48.0" layoutY="360.0" mnemonicParsing="false" onAction="#backButton" text="Back" />

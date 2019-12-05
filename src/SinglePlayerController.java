@@ -1,4 +1,5 @@
 import java.io.IOException;
+import java.util.Random;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -76,32 +77,6 @@ public class SinglePlayerController {
 	@FXML
 	private Button button9;
 
-	@FXML
-	private Button button10;
-
-	@FXML
-	private Button button11;
-
-	@FXML
-	private Button button12;
-
-	@FXML
-	private Button button13;
-
-	@FXML
-	private Button button14;
-
-	@FXML
-	private Button button15;
-
-	@FXML
-	private Button button16;
-
-	@FXML
-	private Button button17;
-
-	@FXML
-	private Button button18;
 
 	@FXML
 	private Button buttonSinglePlayerX;
@@ -109,8 +84,128 @@ public class SinglePlayerController {
 	@FXML
 	private Button buttonSinglePlayerO;
 
-	int x = 0;
-	
+	int x = 1;
+
+	Random roll = new Random();		//import the randon class from java.util and made the object, roll.
+	int button = roll.nextInt(9) + 1;	//the int that rolls the random number (0 - 8) + 1
+
+
+	public void displayPlayerTurn()
+	{
+		if (x == 1)
+		{
+			buttonSinglePlayerX.setText("Player 1-X Turn");
+
+		}
+		else if (x == 0)
+		{
+			buttonSinglePlayerO.setText("Player 1-O Turn");
+
+		}
+	}
+	public void compTurn()		//method that determinds which button the computer will pick.
+	{
+		button = roll.nextInt(9) + 1;
+		if(x == 0) { // o is the comp turn when you are x
+
+			switch (button) {
+
+			case 1:	
+				System.out.println("roll 1");
+				checkDisable();
+				button1.fire();
+				break;
+
+			case 2:
+				System.out.println("roll 2");
+				checkDisable();
+				button2.fire();
+				break;
+
+			case 3:
+				System.out.println("roll 3");
+				checkDisable();
+				button3.fire();
+				break;
+
+			case 4:
+				System.out.println("roll 4");
+				checkDisable();			
+				button4.fire();
+				break;
+
+			case 5:
+				System.out.println("roll 5");
+				checkDisable();
+				button5.fire();
+				break;
+
+			case 6:
+				System.out.println("roll 6");
+				checkDisable();
+				button6.fire();
+				break;
+
+			case 7:
+				System.out.println("roll 7");
+				checkDisable();
+				button7.fire();
+				break;
+
+			case 8:
+				System.out.println("roll 8");
+				checkDisable();
+				button8.fire();
+				break;
+
+			case 9:
+				System.out.println("roll 9");
+				checkDisable();
+				button9.fire();
+				break;
+			}
+		}
+	}
+	public void checkDisable()	//method that checks for the comp if the button is disabled
+	{
+		if ((button == 1) && (button1.isDisabled()))
+		{
+			compTurn();
+		}
+		else if ((button == 2) && (button2.isDisabled()))
+		{
+			compTurn();
+		}
+		else if ((button == 3) && (button3.isDisabled()))
+		{
+			compTurn();
+		}
+		else if ((button == 4) && (button4.isDisabled()))
+		{
+			compTurn();
+		}
+		else if ((button == 5) && (button5.isDisabled()))
+		{
+			compTurn();
+		}
+		else if ((button == 6) && (button6.isDisabled()))
+		{
+			compTurn();
+		}
+		else if ((button == 7) && (button7.isDisabled()))
+		{
+			compTurn();
+		}
+		else if ((button == 8) && (button8.isDisabled()))
+		{
+			compTurn();
+		}
+		else if ((button == 9) && (button9.isDisabled()))
+		{
+			compTurn();
+		}
+	}
+
 	void MainMenuDraw2(ActionEvent event) throws IOException {
 		AnchorPane getmainmenu = FXMLLoader.load(getClass().getResource("MainMenu.fxml"));
 		Draw2.getChildren().setAll(getmainmenu);
@@ -140,10 +235,10 @@ public class SinglePlayerController {
 		if (x == 0) {textField1.setText("O");}
 		button1.setDisable(true);
 		findWinner();
-		//	switchTurns();
+		switchTurns();
 		setButtonText();
 		findDraw();
-
+		compTurn();
 	}
 
 	@FXML
@@ -152,9 +247,10 @@ public class SinglePlayerController {
 		if (x == 0) {textField2.setText("O");}
 		button2.setDisable(true);
 		findWinner();
-		//	switchTurns();
+		switchTurns();
 		setButtonText();
 		findDraw();
+		compTurn();
 
 	}
 
@@ -164,9 +260,10 @@ public class SinglePlayerController {
 		if (x == 0) {textField3.setText("O");}
 		button3.setDisable(true);
 		findWinner();
-		//	switchTurns();
+		switchTurns();
 		setButtonText();
 		findDraw();
+		compTurn();
 
 	}
 
@@ -176,9 +273,10 @@ public class SinglePlayerController {
 		if (x == 0) {textField4.setText("O");}
 		button4.setDisable(true);
 		findWinner();
-		//	switchTurns();
+		switchTurns();
 		setButtonText();
 		findDraw();
+		compTurn();
 
 	}
 
@@ -188,9 +286,10 @@ public class SinglePlayerController {
 		if (x == 0) {textField5.setText("O");}
 		button5.setDisable(true);
 		findWinner();
-		//	switchTurns();
+		switchTurns();
 		setButtonText();
 		findDraw();
+		compTurn();
 
 	}
 
@@ -200,9 +299,10 @@ public class SinglePlayerController {
 		if (x == 0) {textField6.setText("O");}
 		button6.setDisable(true);
 		findWinner();
-		//	switchTurns();
+		switchTurns();
 		setButtonText();
 		findDraw();
+		compTurn();
 
 	}
 
@@ -212,9 +312,11 @@ public class SinglePlayerController {
 		if (x == 0) {textField7.setText("O");}
 		button7.setDisable(true);
 		findWinner();
-		//	switchTurns();
+		switchTurns();
 		setButtonText();
 		findDraw();
+		compTurn();
+
 	}
 
 	@FXML
@@ -223,9 +325,11 @@ public class SinglePlayerController {
 		if (x == 0) {textField8.setText("O");}
 		button8.setDisable(true);
 		findWinner();
-		//	switchTurns();
+		switchTurns();
 		setButtonText();
 		findDraw();
+		compTurn();
+
 	}
 
 	@FXML
@@ -234,9 +338,11 @@ public class SinglePlayerController {
 		if (x == 0) {textField9.setText("O");}
 		button9.setDisable(true);
 		findWinner();
-		//	switchTurns();
+		switchTurns();
 		setButtonText();
 		findDraw();
+		compTurn();
+
 	}
 
 	@FXML

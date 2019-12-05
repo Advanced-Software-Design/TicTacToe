@@ -76,33 +76,6 @@ public class TwoPlayerController {
 	private Button button9;
 
 	@FXML
-	private Button button10;
-
-	@FXML
-	private Button button11;
-
-	@FXML
-	private Button button12;
-
-	@FXML
-	private Button button13;
-
-	@FXML
-	private Button button14;
-
-	@FXML
-	private Button button15;
-
-	@FXML
-	private Button button16;
-
-	@FXML
-	private Button button17;
-
-	@FXML
-	private Button button18;
-
-	@FXML
 	private Button buttonTwoPlayerX;
 
 	@FXML
