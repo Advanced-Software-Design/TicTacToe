@@ -115,7 +115,7 @@ public class TwoPlayerController {
 		findWinner();
 		switchTurns();
 		setButtonText();
-		findDraw();
+		//findDraw();
 
 	}
 
@@ -127,7 +127,7 @@ public class TwoPlayerController {
 		findWinner();
 		switchTurns();
 		setButtonText();
-		findDraw();
+		//findDraw();
 
 	}
 
@@ -139,7 +139,7 @@ public class TwoPlayerController {
 		switchTurns();
 		setButtonText();
 		findWinner();
-		findDraw();
+		//findDraw();
 
 	}
 
@@ -151,7 +151,7 @@ public class TwoPlayerController {
 		switchTurns();
 		setButtonText();
 		findWinner();
-		findDraw();
+		//findDraw();
 
 	}
 
@@ -163,7 +163,7 @@ public class TwoPlayerController {
 		switchTurns();
 		setButtonText();
 		findWinner();
-		findDraw();
+		//findDraw();
 
 	}
 
@@ -175,7 +175,7 @@ public class TwoPlayerController {
 		switchTurns();
 		setButtonText();
 		findWinner();
-		findDraw();
+		//findDraw();
 
 	}
 
@@ -187,7 +187,7 @@ public class TwoPlayerController {
 		switchTurns();
 		setButtonText();
 		findWinner();
-		findDraw();
+		//findDraw();
 	}
 
 	@FXML
@@ -198,7 +198,7 @@ public class TwoPlayerController {
 		switchTurns();
 		setButtonText();
 		findWinner();
-		findDraw();
+		//findDraw();
 	}
 
 	@FXML
@@ -209,7 +209,7 @@ public class TwoPlayerController {
 		switchTurns();
 		setButtonText();
 		findWinner();
-		findDraw();
+		//findDraw();
 	}
 
 
@@ -296,59 +296,56 @@ public class TwoPlayerController {
 			WinnerSlide();
 		}
 		//Row 2
-		if (textField4.getText().equals(textField5.getText()) 
+		else if (textField4.getText().equals(textField5.getText()) 
 				&& textField5.getText().equals(textField6.getText())){
 			System.out.println("Winner Test 2");
 
 			WinnerSlide();
 		}
 		//Row 3
-		if (textField7.getText().equals(textField8.getText())
+		else if (textField7.getText().equals(textField8.getText())
 				&& textField8.getText().equals(textField9.getText())){
 			System.out.println("Winner Test 3");
 
 			WinnerSlide();
 		}
 		//Column 1
-		if (textField1.getText().equals(textField4.getText()) 
+		else if (textField1.getText().equals(textField4.getText()) 
 				&& textField4.getText().equals(textField7.getText())){
 			System.out.println("Winner Test 4");
 
 			WinnerSlide();
 		}
 		//Column 2
-		if (textField2.getText().equals(textField5.getText())
+		else if (textField2.getText().equals(textField5.getText())
 				&& textField5.getText().equals(textField8.getText())){
 			System.out.println("Winner Test 5");
 
 			WinnerSlide();
 		}
 		//Column 3
-		if (textField3.getText().equals(textField6.getText()) 
+		else if (textField3.getText().equals(textField6.getText()) 
 				&& textField6.getText().equals(textField9.getText())){
 			System.out.println("Winner Test 6");
 
 			WinnerSlide();
 		}
 		//Diagonal 1
-		if (textField1.getText().equals(textField5.getText()) 
+		else if (textField1.getText().equals(textField5.getText()) 
 				&& textField5.getText().equals(textField9.getText())){
 			System.out.println("Winner Test 7");
 
 			WinnerSlide();
 		}
 		//Diagonal 2
-		if (textField3.getText().equals(textField5.getText()) 
+		else if (textField3.getText().equals(textField5.getText()) 
 				&& textField5.getText().equals(textField7.getText())){
 			System.out.println("Winner Test 8");
 
 			WinnerSlide();
 
 		}
-
-	}	
-	public void findDraw() {
-		if ((textField1.getText().equals("X") || textField1.getText().equals("O")) && 
+		else if ((textField1.getText().equals("X") || textField1.getText().equals("O")) && 
 				(textField2.getText().equals("X") || textField2.getText().equals("O")) &&
 				(textField3.getText().equals("X") || textField3.getText().equals("O")) &&
 				(textField4.getText().equals("X") || textField4.getText().equals("O")) &&
@@ -359,7 +356,9 @@ public class TwoPlayerController {
 				(textField9.getText().equals("X") || textField9.getText().equals("O"))){
 			DrawSlide();
 		}
-	}
+
+	}	
+
 	public void DrawSlide() {
 		try {
 			Pane getdraw = FXMLLoader.load(getClass().getResource("Draw.fxml"));

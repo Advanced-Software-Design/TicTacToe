@@ -239,7 +239,7 @@ public class SinglePlayerController {
 		setButtonText();
 		compTurn();
 		findWinner();
-		findDraw();
+		//findDraw();
 	}
 
 	@FXML
@@ -251,7 +251,7 @@ public class SinglePlayerController {
 		setButtonText();
 		compTurn();
 		findWinner();
-		findDraw();
+		//findDraw();
 
 	}
 
@@ -264,7 +264,7 @@ public class SinglePlayerController {
 		setButtonText();
 		compTurn();
 		findWinner();
-		findDraw();
+		//findDraw();
 
 	}
 
@@ -277,7 +277,7 @@ public class SinglePlayerController {
 		setButtonText();
 		compTurn();
 		findWinner();
-		findDraw();
+		//findDraw();
 
 	}
 
@@ -290,7 +290,7 @@ public class SinglePlayerController {
 		setButtonText();
 		compTurn();
 		findWinner();
-		findDraw();
+		//findDraw();
 
 	}
 
@@ -303,7 +303,7 @@ public class SinglePlayerController {
 		setButtonText();
 		compTurn();
 		findWinner();
-		findDraw();
+		//findDraw();
 
 	}
 
@@ -316,7 +316,7 @@ public class SinglePlayerController {
 		setButtonText();
 		compTurn();
 		findWinner();
-		findDraw();
+		//findDraw();
 
 	}
 
@@ -329,7 +329,7 @@ public class SinglePlayerController {
 		setButtonText();
 		compTurn();
 		findWinner();
-		findDraw();
+		//findDraw();
 
 	}
 
@@ -342,7 +342,7 @@ public class SinglePlayerController {
 		setButtonText();
 		compTurn();
 		findWinner();
-		findDraw();
+		//findDraw();
 	}
 
 	@FXML
@@ -521,10 +521,7 @@ public class SinglePlayerController {
 			System.out.println("Loser Test 1");
 			LoserSlide();
 		}
-	}
-
-	public void findDraw() {
-		if ((textField1.getText().equals("X") || textField1.getText().equals("O")) && 
+		else if ((textField1.getText().equals("X") || textField1.getText().equals("O")) && 
 				(textField2.getText().equals("X") || textField2.getText().equals("O")) &&
 				(textField3.getText().equals("X") || textField3.getText().equals("O")) &&
 				(textField4.getText().equals("X") || textField4.getText().equals("O")) &&
