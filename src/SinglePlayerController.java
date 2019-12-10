@@ -443,7 +443,7 @@ public class SinglePlayerController {
 			LoserSlide();
 		}
 		//Row 2
-		if (textField4.getText().equals("X") 
+		else if (textField4.getText().equals("X") 
 				&&	(textField5.getText().equals("X") && (textField6.getText().equals("X")))){
 			System.out.println("Winner Test 1");
 			WinnerSlide();
@@ -454,7 +454,7 @@ public class SinglePlayerController {
 			LoserSlide();
 		}
 		//Row 3
-		if (textField7.getText().equals("X") 
+		else if (textField7.getText().equals("X") 
 				&&	(textField8.getText().equals("X") && (textField9.getText().equals("X")))){
 			System.out.println("Winner Test 1");
 			WinnerSlide();
@@ -465,7 +465,7 @@ public class SinglePlayerController {
 			LoserSlide();
 		}
 		//Column 1
-		if (textField1.getText().equals("X") 
+		else if (textField1.getText().equals("X") 
 				&&	(textField4.getText().equals("X") && (textField7.getText().equals("X")))){
 			System.out.println("Winner Test 1");
 			WinnerSlide();
@@ -476,7 +476,7 @@ public class SinglePlayerController {
 			LoserSlide();
 		}
 		//Column 2
-		if (textField2.getText().equals("X") 
+		else if (textField2.getText().equals("X") 
 				&&	(textField5.getText().equals("X") && (textField8.getText().equals("X")))){
 			System.out.println("Winner Test 1");
 			WinnerSlide();
@@ -488,7 +488,7 @@ public class SinglePlayerController {
 		}
 		//Column 3
 
-		if (textField3.getText().equals("X") 
+		else if (textField3.getText().equals("X") 
 				&&	(textField6.getText().equals("X") && (textField9.getText().equals("X")))){
 			System.out.println("Winner Test 1");
 			WinnerSlide();
@@ -499,7 +499,7 @@ public class SinglePlayerController {
 			LoserSlide();
 		}
 		//Diagonal 1
-		if (textField1.getText().equals("X") 
+		else if (textField1.getText().equals("X") 
 				&&	(textField5.getText().equals("X") && (textField9.getText().equals("X")))){
 			System.out.println("Winner Test 1");
 			WinnerSlide();
@@ -511,7 +511,7 @@ public class SinglePlayerController {
 		}
 		//Diagonal 2
 
-		if (textField3.getText().equals("X") 
+		else if (textField3.getText().equals("X") 
 				&&	(textField5.getText().equals("X") && (textField7.getText().equals("X")))){
 			System.out.println("Winner Test 1");
 			WinnerSlide();
